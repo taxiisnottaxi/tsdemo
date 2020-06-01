@@ -1,4 +1,4 @@
-var div = document.createElement('div')
+var div: HTMLDivElement = document.createElement('div')
 div.style.border = '1px solid red'
 div.style.height = '100px'
 div.style.width = '100px'
@@ -7,10 +7,10 @@ console.log(div)
 
 document.body.appendChild(div)
 
-var x = false;
-var position = [0, 0]
+var x: boolean = false;
+var position: [number, number] = [0, 0]
 
-div.onmousedown = (e) => {
+div.onmousedown = (e: MouseEvent) => {
     x = true
     position = [e.clientX, e.clientY]
 }
@@ -32,3 +32,5 @@ document.onmousemove = (e) => {
 document.onmouseup = (e) => {
     x = false
 }
+
+
